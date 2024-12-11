@@ -16,6 +16,7 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using System.Collections.Generic;
 using Acme.BookStore.Books;
+using Acme.BookStore.Authors;
 
 namespace Acme.BookStore.EntityFrameworkCore;
 
@@ -29,6 +30,7 @@ public class BookStoreDbContext :
 {
     /* Add DbSet properties for your Aggregate Roots / Entities here. */
     public DbSet<Book> Books { get; set; }
+    public DbSet<Author> Authors { get; set; }
 
     #region Entities from the modules
 
@@ -95,6 +97,14 @@ public class BookStoreDbContext :
             b.ToTable(BookStoreConsts.DbTablePrefix + "Books" + BookStoreConsts.DbSchema);
             b.ConfigureByConvention();
             b.Property(book => book.Name).IsRequired().HasMaxLength(250);
+        });
+
+        builder.Entity<Author>(a => 
+        {
+            a.ToTable(BookStoreConsts.DbTablePrefix + "Authors" + BookStoreConsts.DbSchema);
+            a.ConfigureByConvention();
+            a.Property(author => author.Name).IsRequired().HasMaxLength(AuthorConsts.MaxNameLength);
+            a.HasIndex(author => author.Name);
         });
     }
 }

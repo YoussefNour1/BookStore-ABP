@@ -1,7 +1,7 @@
 {
   "culture": "ar",
   "texts": {
-    "AppName": "BookStore",
+    "AppName": "بوك ستور",
     "Menu:Home": "الرئيسية",
     "Menu:ContactUs": "اتصل بنا",
     "Menu:ArticleSample": "عينة المادة",
@@ -59,6 +59,14 @@
     "Enum:BookType.5": "رعب",
     "Enum:BookType.6": "علمي",
     "Enum:BookType.7": "خيال علمي",
-    "Enum:BookType.8": "شعر"
+    "Enum:BookType.8": "شعر",
+    "BookDeletionConfirmationMessage": "متأكد انك عايز تمسح الكتاب ده '{0}'؟",
+    "SuccessfullyDeleted": "اتمسح خلاص",
+    "Permission:BookStore": "بوك ستور",
+    "Permission:Books": "ادارة الكتب",
+    "Permission:Books.Create": "اضافة كتاب جديد",
+    "Permission:Books.Edit": "تعديل الكتب",
+    "Permission:Books.Delete": "حذف الكتب",
+    "BookStore:00001": "فيه مؤلف موجود بالفعل بنفس الاسم: {name}"
   }
 }
