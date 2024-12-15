@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Intrinsics.Arm;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Volo.Abp;
@@ -6,7 +7,7 @@ using Volo.Abp.Domain.Services;
 
 namespace Acme.BookStore.Authors
 {
-    public class AuthorManager
+    public class AuthorManager:DomainService
     {
         private readonly IAuthorRepository _authorRepository;
 

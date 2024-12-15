@@ -97,6 +97,7 @@ public class BookStoreDbContext :
             b.ToTable(BookStoreConsts.DbTablePrefix + "Books" + BookStoreConsts.DbSchema);
             b.ConfigureByConvention();
             b.Property(book => book.Name).IsRequired().HasMaxLength(250);
+            b.HasOne<Author>().WithMany().HasForeignKey(book => book.AuthorId).IsRequired();
         });
 
         builder.Entity<Author>(a => 

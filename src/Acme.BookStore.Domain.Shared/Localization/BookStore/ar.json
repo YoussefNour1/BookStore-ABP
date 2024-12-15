@@ -67,6 +67,10 @@
     "Permission:Books.Create": "اضافة كتاب جديد",
     "Permission:Books.Edit": "تعديل الكتب",
     "Permission:Books.Delete": "حذف الكتب",
-    "BookStore:00001": "فيه مؤلف موجود بالفعل بنفس الاسم: {name}"
+    "BookStore:00001": "فيه مؤلف موجود بالفعل بنفس الاسم: {name}",
+    "Permission:Authors": "ادارة المؤلفين",
+    "Permission:Authors.Create": "اضافة مؤلف جديد",
+    "Permission:Authors.Edit": "تعديل المؤلفين",
+    "Permission:Authors.Delete": "حذف المؤلفين"
   }
 }

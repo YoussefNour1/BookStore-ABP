@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Authors\Index.js" />
     <None Remove="Pages\Books\Index.js" />
   </ItemGroup>
 
